@@ -8,10 +8,10 @@
 <body>
     <script>
 
-        // set the name var to unknow os first
+        // set the name var to unknow OS first
         var name = "Unknown OS";
         
-        // functon to get the OS of the user and display welcome message
+        // function to get the OS of the user and display welcome message
         function getOS() {
             // 1: not share info
             if (navigator.appVersion.indexOf("Win") != -1) {
@@ -33,7 +33,7 @@
             }
         }
         
-        // Function to display position and decide where you are at
+        // function to display position and decide where you are at
         function showPosition(position) {
             var lat =  position.coords.latitude;
             var long = position.coords.longitude;
@@ -41,10 +41,12 @@
             // assume -100 is the divider of WestCoast and East Coast
             // NY long = -74, Los Angeles long = -118
             if (long < -100) {
-                alert ("You are in WestCoast!");
+                window.location.href = "western.html";
+                alert ("You are in the West Coast!");
             }
             else {
-                alert ("you are in EastCoast!");
+                window.location.href = "eastern.html";
+                alert ("You are in the East Coast!");
             }
         }
         
